@@ -4,16 +4,16 @@ import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 
-const MegaHeader = styled.header`
+export const Wrapper = styled.wrapper`
   background-color: rebeccapurple;
   color: #fff;
 `
-const Layout = () => {
+export const Layout = () => {
   return (
     // adding a CSS class for a user stylesheet hook
-    <MegaHeader className={`site-wrap`}>
+    <Wrapper className={`wrapper`}>
       <h1>My Site</h1>
-    </MegaHeader>
+    </Wrapper>
   )
 }
 
@@ -59,6 +59,7 @@ export default ({ data }) => {
           </div>
         ))}
       </main>
+    </Layout>
   )
 
   const mountNode = document.querySelector('main')
