@@ -60,14 +60,14 @@ export default ({ data }) => {
           </div>
         ))}
       </main>
-    </Layout>
-  )
-}
 
-const mountNode = document.querySelector('main')
-ReactDOM.render(<Layout />, mountNode)
-
-export const query = graphql`
+      const mountNode = document.querySelector('main')
+      ReactDOM.render(<Layout />, mountNode)
+        )
+      }
+      
+      
+      export const query = graphql`
   query {
     allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
       totalCount
