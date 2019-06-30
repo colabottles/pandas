@@ -1,8 +1,20 @@
 import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
-
+import { styled } from 'styled-components'
 import { rhythm } from "../utils/typography"
+
+const Header = styled.header`
+  background-color: rebeccapurple;
+`
+
+const Layout = () => {
+  return (
+    <Header className={`wrapper`}>
+      <h1>Pandas! Pandas! Pandas!</h1>
+    </Header>
+  )
+}
 export default ({ children }) => {
   const data = useStaticQuery(graphql`
   query {
