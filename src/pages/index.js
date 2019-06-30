@@ -17,9 +17,6 @@ const Layout = () => {
   )
 }
 
-const mountNode = document.querySelector('main')
-ReactDOM.render(<Layout />, mountNode)
-
 export default ({ data }) => {
   return (
     <Layout>
@@ -62,8 +59,10 @@ export default ({ data }) => {
           </div>
         ))}
       </main>
-    </Layout>
   )
+
+  const mountNode = document.querySelector('main')
+  ReactDOM.render(<Layout />, mountNode)
 }
 
 export const query = graphql`
