@@ -3,6 +3,7 @@ import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
+import { styled } from "styled-components"
 
 export const Wrapper = styled.wrapper`
   background-color: rebeccapurple;
