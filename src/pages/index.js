@@ -62,10 +62,10 @@ export default ({ data }) => {
       </main>
     </Layout>
   )
-
-  const mountNode = document.querySelector('main')
-  ReactDOM.render(<Layout />, mountNode)
 }
+
+const mountNode = document.querySelector('main')
+ReactDOM.render(<Layout />, mountNode)
 
 export const query = graphql`
   query {
