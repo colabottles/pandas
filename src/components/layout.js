@@ -4,15 +4,15 @@ import { useStaticQuery, Link, graphql } from "gatsby"
 import { styled } from 'styled-components'
 import { rhythm } from "../utils/typography"
 
-const Header = styled.header`
+const Wrapper = styled.header`
   background-color: rebeccapurple;
 `
 
 const Layout = () => {
   return (
-    <Header className={`wrapper`}>
+    <Wrapper className={`wrapper`}>
       <h1>Pandas! Pandas! Pandas!</h1>
-    </Header>
+    </Wrapper>
   )
 }
 export default ({ children }) => {
