@@ -21,7 +21,7 @@ export const Layout = () => {
 export default ({ data }) => {
   return (
     <Layout>
-      <main>
+      <div>
         <h1
           css={css`
             display: inline-block;
@@ -59,7 +59,7 @@ export default ({ data }) => {
             </Link>
           </div>
         ))}
-      </main>
+      </div>
 
       const mountNode = document.querySelector('main')
       ReactDOM.render(<Layout />, mountNode)

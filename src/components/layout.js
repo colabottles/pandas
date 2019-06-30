@@ -14,7 +14,7 @@ export default ({ children }) => {
   }
   `)
   return (
-    <main
+    <div
       css={css`
         margin: 0 auto;
         max-width: 700px;
@@ -42,6 +42,6 @@ export default ({ children }) => {
         About
       </Link>
       {children}
-    </main>
+    </div>
   )
 }
