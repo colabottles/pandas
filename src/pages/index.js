@@ -4,10 +4,26 @@ import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
 import Layout from "../components/layout"
 
+const MegaHeader = styled.header`
+  background-color: rebeccapurple;
+  color: #fff;
+`
+const Layout = () => {
+  return (
+    // adding a CSS class for a user stylesheet hook
+    <MegaHeader className={`site-wrap`}>
+      <h1>My Site</h1>
+    </MegaHeader>
+  )
+}
+
+const mountNode = document.querySelector('main')
+ReactDOM.render(<Layout />, mountNode)
+
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
+      <main>
         <h1
           css={css`
             display: inline-block;
@@ -45,7 +61,7 @@ export default ({ data }) => {
             </Link>
           </div>
         ))}
-      </div>
+      </main>
     </Layout>
   )
 }
