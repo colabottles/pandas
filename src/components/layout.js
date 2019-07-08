@@ -2,7 +2,7 @@ import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
-import { style } from "../components/container.js"
+import { styled } from "../components/container.js"
 
 export const Layout = () => {
   return (
