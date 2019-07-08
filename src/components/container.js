@@ -6,12 +6,3 @@ const Wrapper = styled.wrapper`
   margin: 3rem auto;
   max-width: 600px;
 `
-
-const Layout = () => {
-  return (
-    // add a stable CSS class
-    <Wrapper className={`wrapper`}>
-      
-    </Wrapper>
-  )
-}
