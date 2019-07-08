@@ -2,12 +2,8 @@ import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
-import { styled } from "../components/layout"
+import { style } from "../components/container.js"
 
-export const Wrapper = styled.wrapper`
-  background-color: rebeccapurple;
-  color: #fff;
-`
 export const Layout = () => {
   return (
     // adding a CSS class for a user stylesheet hook
@@ -58,7 +54,4 @@ export default ({ children }) => {
       {children}
     </div>
   )
-
-  const mountNode = document.querySelector('main')
-  ReactDOM.render(<Layout />, mountNode)
 }
