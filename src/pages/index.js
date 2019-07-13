@@ -54,23 +54,6 @@ const User = props => (
   </UserWrapper>
 )
 
-export default () => (
-  <Container>
-    <h1>About Styled Components</h1>
-    <p>Styled Components is cool</p>
-    <User
-      username="Jane Doe"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
-      excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    />
-    <User
-      username="Bob Smith"
-      avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
-      excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
-    />
-  </Container>
-)
-
 export default ({ data }) => {
   return (
     <Layout>
@@ -83,6 +66,20 @@ export default ({ data }) => {
         >
           Amazing Pandas Eating Things
         </h1>
+        <Container>
+          <h2>About Styled Components</h2>
+          <p>Styled Components is cool</p>
+          <User
+            username="Jane Doe"
+            avatar="https://s3.amazonaws.com/uifaces/faces/twitter/adellecharles/128.jpg"
+            excerpt="I'm Jane Doe. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          />
+          <User
+            username="Bob Smith"
+            avatar="https://s3.amazonaws.com/uifaces/faces/twitter/vladarbatov/128.jpg"
+            excerpt="I'm Bob smith, a vertically aligned type of guy. Lorem ipsum dolor sit amet, consectetur adipisicing elit."
+          />
+        </Container>
         <h4>{data.allMarkdownRemark.totalCount} Posts</h4>
         {data.allMarkdownRemark.edges.map(({ node }) => (
           <div key={node.id}>
