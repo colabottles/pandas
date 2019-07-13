@@ -60,8 +60,8 @@ export default ({ data }) => {
                   title
                   date(formatString: "DD MMMM, YYYY")
                 }
-                fields {
-                  slug
+                fields {            
+                  slug          
                 }
                 excerpt
               }
