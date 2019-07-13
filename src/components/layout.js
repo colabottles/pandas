@@ -41,6 +41,7 @@ export default ({ children }) => {
       >
         About
       </Link>
+      {children}
       <Link
         to={`/us/`}
         css={css`
