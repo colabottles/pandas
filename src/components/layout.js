@@ -2,23 +2,6 @@ import React from "react"
 import { css } from "@emotion/core"
 import { useStaticQuery, Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
-import { styled } from "../components/container.js"
-
-const Wrapper = styled.wrapper`
-  background-color: rebeccapurple;
-  color: #fff;
-`
-const Layout = () => {
-  return (
-    // adding a CSS class for a user stylesheet hook
-    <Wrapper className={`wrapper`}>
-      <h1>My Site</h1>
-    </Wrapper>
-  )
-}
-
-const mountNode = document.querySelector('div')
-ReactDOM.render(<Layout />, mountNode)
 
 export default ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -31,7 +14,7 @@ export default ({ children }) => {
   }
   `)
   return (
-    <main
+    <div
       css={css`
         margin: 0 auto;
         max-width: 700px;
@@ -59,6 +42,6 @@ export default ({ children }) => {
         About
       </Link>
       {children}
-    </main>
+    </div>
   )
 }
