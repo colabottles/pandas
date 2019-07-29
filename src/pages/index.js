@@ -6,7 +6,7 @@ import { rhythm } from "../utils/typography"
 export default ({ data }) => {
   return (
     <Layout>
-      <div>
+      <div className="container">
         <h1
           css={css`
             display: inline-block;
@@ -47,7 +47,6 @@ export default ({ data }) => {
       </div>
         )
       }
-      
       
       export const query = graphql`
         query {
