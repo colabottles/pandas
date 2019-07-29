@@ -7,7 +7,7 @@ export default ({ data }) => {
   return (
     <Layout>
       <div className="container">
-        <h1
+        <h1 className="site"
           css={css`
             display: inline-block;
             border-bottom: 1px solid;
