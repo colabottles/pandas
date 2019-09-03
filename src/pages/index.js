@@ -57,7 +57,7 @@ export default ({ data }) => {
                 id
                 frontmatter {
                   title
-                  date(formatString: "DD MMMM, YYYY")
+                  date(formatString: "DD MM, YYYY")
                 }
                 fields {            
                   slug          
