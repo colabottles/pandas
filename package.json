@@ -14,7 +14,7 @@
   },
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "acorn": "^7.2.0",
+    "acorn": "^6.4.1",
     "babel-plugin-styled-components": "^1.10.6",
     "gatsby": "^2.18.11",
     "gatsby-cli": "^2.12.45",
@@ -25,7 +25,7 @@
     "gatsby-transformer-remark": "^2.6.42",
     "graphql-playground-html": "^1.6.25",
     "node": "^12.13.0",
-    "react": "^16.12.0",
+    "react": "^16.13.1",
     "react-dom": "^16.12.0",
     "react-typography": "^0.16.19",
     "serialize-javascript": "2.1.2",
