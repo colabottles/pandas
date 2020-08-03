@@ -2,12 +2,13 @@ import React from "react"
 import { css } from "@emotion/core"
 import { Link, graphql } from "gatsby"
 import { rhythm } from "../utils/typography"
+import Layout from "../components/layout"
 
-export default ({ data }) => {
+export default function Home({ data }) {
   return (
     <Layout>
-      <div className="container">
-        <h1 className="site"
+      <div>
+        <h1
           css={css`
             display: inline-block;
             border-bottom: 1px solid;
@@ -23,8 +24,7 @@ export default ({ data }) => {
               css={css`
                 text-decoration: none;
                 color: inherit;
-              `
-              }
+              `}
             >
               <h3
                 css={css`
@@ -34,7 +34,7 @@ export default ({ data }) => {
                 {node.frontmatter.title}{" "}
                 <span
                   css={css`
-                    color: #bbb;
+                    color: #555;
                   `}
                 >
                   — {node.frontmatter.date}
@@ -45,26 +45,27 @@ export default ({ data }) => {
           </div>
         ))}
       </div>
-        )
-      }
-      
-    export const query = graphql`
-      query {
-        allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
-          totalCount
-          edges {
-            node {
-              id
-              frontmatter {
-                title
-                date(formatString: "DD MMMM, YYYY")
-              }
-              fields {
-                slug
-              }
-              excerpt
-            }
+    </Layout>
+  )
+}
+
+export const query = graphql`
+  query {
+    allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+      totalCount
+      edges {
+        node {
+          id
+          frontmatter {
+            title
+            date(formatString: "DD MMMM, YYYY")
           }
+          fields {
+            slug
+          }
+          excerpt
         }
       }
-    `
+    }
+  }
+`
